@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
+Updated by Ryan Caro, October 2021
+UCLA Capstone Project
+for SFMTA Equity Toolkit
+
+---------------------------------------------------
 Created on Sat Jun 13 00:41:46 2020
 
 This class contains all the configurations necessary to run the dashboard for 
@@ -29,7 +34,7 @@ path = str(Path(os.getcwd()).parent)
 
 
 CONFIG_FILE_NAME='config.cfg' #example
-REGIONS_DEFAULT = ['Boston', 'New York', 'Philadelphia', 'District of Columbia', 'Chicago','Los Angeles','San Francisco-Oakland'] #example
+REGIONS_DEFAULT = ['San Francisco-Oakland'] #example
 OTP_CONFIG_FILE = 'otp_config.ini'
 
 class FileConfig():
@@ -100,7 +105,7 @@ class FileConfig():
         config['General'] = {}
         config['General']['county_ids'] = path + '/data/General/county_ids.csv' 
         config['General']['us_osm'] = path + '/data/General/us-latest.osm.pbf' 
-        config['General']['transit_feeds'] = 'Boston, Philadelphia, District of Columbia, Chicago, Los Angeles'
+        #config['General']['transit_feeds'] = 'Boston, Philadelphia, District of Columbia, Chicago, Los Angeles'
         config['General']['transit_land'] = 'San Francisco-Oakland, New York'
         config['General']['gen'] = path + '/data/General' 
         config['General']['otp_input'] = path + '/otp/otp_input'
